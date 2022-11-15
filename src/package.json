@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "antd": "latest",
+    "gsap": "3.11.3",
+    "lodash": "4.17.21",
+    "moment": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "uuid": "9.0.0"
+  },
+  "keywords": [],
+  "name": "demo-number-scroll",
+  "description": ""
+}
