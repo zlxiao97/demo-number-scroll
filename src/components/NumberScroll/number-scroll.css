@@ -1,0 +1,10 @@
+.number-scroll__stage {
+  width: 1.25rem;
+  height: 36px;
+  font-size: 16px;
+  line-height: 2;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 5px;
+}

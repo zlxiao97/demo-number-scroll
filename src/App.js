@@ -1,8 +1,13 @@
 import React from 'react'
-import "./App.css";
+import NumberScroll from './components/NumberScroll'
+import './App.css'
 
 function App() {
-  return <div className="App">App</div>;
+  return (
+    <div className='App'>
+      <NumberScroll />
+    </div>
+  )
 }
 
-export default App;
+export default App
