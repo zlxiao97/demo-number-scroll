@@ -1,12 +1,17 @@
 import React from 'react'
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
+import { v4 as uuidV4 } from "uuid";
 import NumberScrollItem from './NumberScrollItem'
 import './number-scroll.css'
 
-const NumberScroll = () => {
+const NumberScroll = (props) => {
+  const numbers = String(props.number).split('')
+
   return (
     <div className='number-scroll'>
-      <NumberScrollItem />
+      {numbers.map((item) => (
+        <NumberScrollItem key={uuidV4()} value={+item} />
+      ))}
     </div>
   )
 }

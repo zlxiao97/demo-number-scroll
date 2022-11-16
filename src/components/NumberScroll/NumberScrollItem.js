@@ -12,7 +12,7 @@ const NumberScrollItem = (props) => {
     .concat(0)
   return (
     <div className='number-scroll__stage' ref={ref}>
-      <div className='number-scroll__gimmick' data-value={0}>
+      <div className='number-scroll__gimmick' data-value={props.value}>
         {numbers.map((number) => (
           <div key={uuidV4()}>{number}</div>
         ))}
