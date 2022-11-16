@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { v4 as uuidV4 } from "uuid";
+import { v4 as uuidV4 } from 'uuid'
 import NumberScrollItem from './NumberScrollItem'
+import SymbolItem from './SymbolItem'
+import { isNumber } from '../../utils/utils'
 import './number-scroll.css'
 
 const NumberScroll = (props) => {
@@ -9,9 +11,13 @@ const NumberScroll = (props) => {
 
   return (
     <div className='number-scroll'>
-      {numbers.map((item) => (
-        <NumberScrollItem key={uuidV4()} value={+item} />
-      ))}
+      {numbers.map((item) =>
+        isNumber(item) ? (
+          <NumberScrollItem key={uuidV4()} value={+item} />
+        ) : (
+          <SymbolItem key={uuidV4()} value={item} />
+        )
+      )}
     </div>
   )
 }

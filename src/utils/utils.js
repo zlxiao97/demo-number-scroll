@@ -17,3 +17,5 @@ export const getScrollSpeed = (heightPerNumber, FPS = 30) => {
 }
 
 export const getDuration = (s, v) => s / v
+
+export const isNumber = (value) => /^\d$/g.test(value);
