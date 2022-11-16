@@ -4,6 +4,7 @@
     "gsap": "3.11.3",
     "lodash": "4.17.21",
     "moment": "latest",
+    "prop-types": "^15.8.1",
     "react": "latest",
     "react-dom": "latest",
     "uuid": "9.0.0"

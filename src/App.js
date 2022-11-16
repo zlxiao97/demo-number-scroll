@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <div className='App'>
-      <NumberScroll />
+      <NumberScroll number={"1,231,232.00"} duration={5} />
     </div>
   )
 }
