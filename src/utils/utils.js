@@ -18,4 +18,10 @@ export const getScrollSpeed = (heightPerNumber, FPS = 30) => {
 
 export const getDuration = (s, v) => s / v
 
-export const isNumber = (value) => /^\d$/g.test(value);
+export const isNumber = (value) => /^\d$/g.test(value)
+
+export const numberFormat = (number) =>
+  Number(number).toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })

@@ -1,18 +1,21 @@
 import React from 'react'
 import { v4 as uuidV4 } from 'uuid'
-import useNumberScroll from './hooks/useNumberScroll'
+import { HEIGHT_PER_NUMBER } from './hooks/useNumberScroll'
 
 const NumberScrollItem = (props) => {
-  const ref = useNumberScroll({
-    duration: 5,
-  })
   const numbers = new Array(10)
     .fill(null)
     .map((_, index) => index)
     .concat(0)
   return (
-    <div className='number-scroll__stage' ref={ref}>
-      <div className='number-scroll__gimmick' data-value={props.value}>
+    <div className='number-scroll__stage'>
+      <div
+        className='number-scroll__gimmick number-scroll__gimmick--scroll'
+        data-value={props.value}
+        style={{
+          transform: `translateY(-${props.value * HEIGHT_PER_NUMBER}px)`,
+        }}
+      >
         {numbers.map((number) => (
           <div key={uuidV4()}>{number}</div>
         ))}

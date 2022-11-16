@@ -4,13 +4,21 @@ import { v4 as uuidV4 } from 'uuid'
 import NumberScrollItem from './NumberScrollItem'
 import SymbolItem from './SymbolItem'
 import { isNumber } from '../../utils/utils'
+import useNumberScroll from './hooks/useNumberScroll'
 import './number-scroll.css'
 
 const NumberScroll = (props) => {
   const numbers = String(props.number).split('')
 
+  const ref = useNumberScroll(
+    {
+      duration: props.duration,
+    },
+    [props.number]
+  )
+
   return (
-    <div className='number-scroll'>
+    <div className='number-scroll' ref={ref}>
       {numbers.map((item) =>
         isNumber(item) ? (
           <NumberScrollItem key={uuidV4()} value={+item} />
