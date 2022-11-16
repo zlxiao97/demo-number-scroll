@@ -1,3 +1,4 @@
+import React from 'react'
 import NumberScrollItem from './NumberScrollItem'
 import './number-scroll.css'
 
